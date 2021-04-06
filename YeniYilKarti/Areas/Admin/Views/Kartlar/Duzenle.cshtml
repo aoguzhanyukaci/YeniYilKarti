@@ -1,0 +1,64 @@
+﻿@model Kart
+@{
+    ViewBag.Title = "Kart Ekle";
+    ViewBag.Don = "";
+    ViewBag.KartGoruntule = "aktive";
+    ViewBag.KartEkle = "";
+}
+
+<h2>Kartını Düzenle</h2>
+
+@using (Html.BeginForm("Duzenle", "Kartlar", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <p style="display:none" id="resimAd">@Model.ResimAd</p>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.ResimAd, "Kartınızı seçin : ")
+        <select id="resimSec" name="ResimAd" class="image-picker">
+            <option data-img-src="/Image/01.png" data-img-class="first" data-img-alt="Page 1" value='1'>  Kart 1 </option>
+            <option data-img-src="/Image/02.png" data-img-alt="Page 2" value='2'>  Kart 2  </option>
+            <option data-img-src="/Image/03.png" data-img-alt="Page 3" value='3'>  Kart 3  </option>
+            <option data-img-src="/Image/04.png" data-img-alt="Page 4" value='4'>  Kart 4  </option>
+            <option data-img-src="/Image/05.png" data-img-alt="Page 5" value='5'>  Kart 5  </option>
+            <option data-img-src="/Image/06.png" data-img-alt="Page 6" value='6'>  Kart 6  </option>
+            <option data-img-src="/Image/07.png" data-img-alt="Page 7" value='7'>  Kart 7  </option>
+            <option data-img-src="/Image/08.png" data-img-alt="Page 8" value='8'>  Kart 8  </option>
+            <option data-img-src="/Image/09.png" data-img-alt="Page 9" value='9'>  Kart 9  </option>
+            <option data-img-src="/Image/10.png" data-img-alt="Page 10" value='10'> Kart 10 </option>
+            <option data-img-src="/Image/11.png" data-img-alt="Page 11" value='11'> Kart 11 </option>
+            <option data-img-src="/Image/12.png" data-img-alt="Page 12" value='12'> Kart 12 </option>
+            <option data-img-src="/Image/13.png" data-img-alt="Page 13" value='13'> Kart 13 </option>
+            <option data-img-src="/Image/14.png" data-img-alt="Page 14" data-img-class="last" value='14'> Kart 14 </option>
+        </select>
+        @Html.ValidationMessageFor(x => x.ResimAd)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Baslik)
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Baslik)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.AliciAd, "Alıcı : ")
+        @Html.TextBoxFor(x => x.AliciAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.AliciAd)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.GonderenAd, "Gönderen : ")
+        @Html.TextBoxFor(x => x.GonderenAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.GonderenAd)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Mesaj, "Mesaj : ")
+        @Html.TextAreaFor(x => x.Mesaj, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Mesaj)
+    </div>
+    <a href="@Url.Action("Index","Kartlar")" class="btn btn-danger btn-lg ">Geri Dön</a>
+    <button class="btn btn-success btn-lg" style="margin-left:80%">Kaydet</button>
+
+}
+

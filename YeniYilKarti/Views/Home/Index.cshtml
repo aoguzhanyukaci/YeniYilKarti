@@ -1,0 +1,198 @@
+﻿@{
+    ViewBag.Title = "Yeni Yıl Kartı - Anasayfa";
+    ViewBag.Home = "active";
+    ViewBag.Kartlar = "";
+}
+
+<div>
+    <div class="ulockd-home-slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pogoSlider" id="js-main-slider">
+                    <div class="pogoSlider-slide" style="background-image:url(/TempCssJs/images/slider-01.jpg);"></div>
+                    <div class="pogoSlider-slide" style="background-image:url(/TempCssJs/images/slider-02.jpg);"></div>
+                </div><!-- .pogoSlider -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- wish -->
+    <div id="wish" class="about-box" style="padding-bottom: 0;">
+        <div class="about-a1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-box">
+                            <h2>Yılbaşı Mesajları</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row align-items-center about-main-info">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 text_align_center">
+                                <div class="full">
+                                    <img class="img-responsive" src="~/TempCssJs/images/w1.png" alt="#" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <h2><img style="width: 60px;" src="~/TempCssJs/images/head_s.png" alt="#" /> Yeni Yıl Dilekleri</h2>
+                                <p>Bu yıl senin yılın olacak, buna inanıyorum. Başta sağlık, mutluluk ve huzur, nice başarılar hep seninle olsun. Yeni yılın kutlu olsun!</p>
+                                <a href="@Url.Action("Login","Account")" class="hvr-radial-out button-theme">Giriş Yap</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-a1" style="background:#f7f7f7;margin-top: 50px;padding-top: 75px;padding-bottom: 50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row align-items-center about-main-info">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <h2><img style="width: 60px;" src="~/TempCssJs/images/head_s.png" alt="#" /> Yeni Yıl Dilekleri</h2>
+                                <p>Yeni yılda yüzünden gülücükler, gönlünden sevgiler eksik olmasın. Mutluluğunun ömür boyu devam etmesini, yaşantında hıç bir şeyin seni üzmemesini diler ve yeni yılını candan kutlarım.</p>
+                                <a href="@Url.Action("Login","Account")" class="hvr-radial-out button-theme">Giriş Yap</a>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 text_align_center">
+                                <div class="full">
+                                    <img class="img-responsive" src="~/TempCssJs/images/w2.png" alt="#" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- wish us -->
+    <!-- best deals -->
+    <div id="b-deals" class="services-box main-timeline-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-box">
+                        <h2>Yeni Yıl Fotoğrafları</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <figure class="effect-service">
+                        <img src="~/TempCssJs/images/d1.png" alt="" />
+                        <figcaption>
+                            <h2>Birinci Gün</h2>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <figure class="effect-service">
+                        <img src="~/TempCssJs/images/d2.png" alt="" />
+                        <figcaption>
+                            <h2>İkinci Gün</h2>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <figure class="effect-service">
+                        <img src="~/TempCssJs/images/d3.png" alt="" />
+                        <figcaption>
+                            <h2>Üçüncü Gün</h2>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <figure class="effect-service">
+                        <img src="~/TempCssJs/images/d4.png" alt="" />
+                        <figcaption>
+                            <h2>Dördüncü Gün</h2>
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- best deals -->
+    <!-- donate -->
+    <div id="donate" class="gallery-box" style="background: #f7f7f7;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-box">
+                        <h2>Yeni Yıldan Kesitler</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="popup-gallery clearfix">
+                    <li>
+                        <a href="~/TempCssJs/images/d1.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d1.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d2.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d2.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d3.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d3.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d4.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d4.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d1.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d1.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d2.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d2.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d3.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d3.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d4.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d4.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/TempCssJs/images/d1.png">
+                            <img class="img-fluid" src="~/TempCssJs/images/d1.png" alt="single image">
+                            <span class="overlay"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end donate -->
+</div>

@@ -1,0 +1,46 @@
+﻿@model Kart
+@{
+    ViewBag.Title = "Kart Ekle";
+    ViewBag.Don = "";
+    ViewBag.KartGoruntule = "";
+    ViewBag.KartEkle = "active";
+}
+
+<div class="text-center">
+    <h2>Yeni Kart Hazırla</h2>
+    <img width="300" src="@Url.Content($"~/Image/0{@ViewBag.ResimAd}.png")" />
+</div>
+
+@using (Html.BeginForm("Yeni", "Kartlar", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.HiddenFor(x => x.ResimAd, new { value = $"{ViewBag.ResimAd}" })
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Baslik)
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Baslik)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.AliciAd, "Alıcı :")
+        @Html.TextBoxFor(x => x.AliciAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.AliciAd)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.GonderenAd, "Gönderen :")
+        @Html.TextBoxFor(x => x.GonderenAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.GonderenAd)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Mesaj, "Mesajınız :")
+        @Html.TextAreaFor(x => x.Mesaj, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Mesaj)
+    </div>
+    <a href="@Url.Action("Index","Kartlar")" class="btn btn-danger btn-lg ">Geri Dön</a>
+    <button class="btn btn-success btn-lg" style="margin-left:80%">Kaydet</button>
+
+
+}

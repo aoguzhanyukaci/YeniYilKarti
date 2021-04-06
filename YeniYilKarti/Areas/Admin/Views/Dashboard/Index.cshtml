@@ -1,0 +1,49 @@
+﻿@model List<Kart>
+@{
+    ViewBag.Title = "Anasayfa";
+    ViewBag.Don = "";
+    ViewBag.KartGoruntule = "active";
+    ViewBag.KartEkle = "";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class=" col-md-4 mt-3">
+            <div class="card text-center mb-3">
+
+                <div class="card-header">
+                    <h5 class="card-title">@item.Baslik</h5>
+                </div>
+
+                <img src="@Url.Content($"~/Image/0{item.ResimAd}.png")" class="card-img-bottom" width="250" />
+
+
+
+                <div class="card-body p-0">
+                    <div class="d-flex justify-content-center bg-success">
+                        <a href="@Url.Content($"~/Kartlar/Goruntule/{item.Id}")" target="_blank" class="text-white"><i class="fas fa-search"></i> Görüntüle</a>
+                    </div>
+
+                    <div class="d-flex justify-content-center bg-dark">
+                        <a href="@Url.Content($"/Admin/Kartlar/Indir/{item.Id}")" target="_blank" class="mr-3 text-white"><i class="fas fa-file-download"></i> İndir</a>
+                    </div>
+
+                    <div class="d-flex justify-content-center bg-warning ">
+                        <a href="@Url.Content($"/Admin/Kartlar/Duzenle/{item.Id}")" class="text-white"><i class="fas fa-pen-square "></i> Düzenle</a>
+                    </div>
+
+                    <div class="d-flex justify-content-center bg-danger">
+                        <a href="@Url.Content($"/Admin/Kartlar/Sil/{item.Id}")" class="text-white"><i class="fas fa-trash"></i> Sil</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+
+
+
+

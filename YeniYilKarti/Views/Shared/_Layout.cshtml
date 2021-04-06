@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Yeni Yıl Kartı</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/TempCssJs/css/bootstrap.min.css">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="~/TempCssJs/css/pogo-slider.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="~/TempCssJs/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/TempCssJs/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/TempCssJs/css/custom.css">
+    
+    <link rel="icon" href="~/Image/yeniyilkarti.ico">
+</head>
+
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    <!-- Start header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="@Url.Action("Index","Home")">Yeni Yıl Kartı</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item @ViewBag.Home">
+                    <a class="nav-link" href="@Url.Action("Index","Home")">Home</a>
+                </li>
+                <li class="nav-item @ViewBag.Kartlar">
+                    <a class="nav-link" href="@Url.Action("Index","Dashboard",new { area="admin"},null)">Yeni Yıl Kartları</a>
+                </li>
+            </ul>
+            <div class="">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <!-- End header -->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!-- end contact -->
+    <!-- Start Footer -->
+    <footer class="footer-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="footer-company-name">Tüm Hakları Saklıdır. &copy; 2021 <a href="#"> Yeni Yıl Kartı </a> Tasarlayan : <a href="https://oguzhanyukaci.com/"> Ali Rıza Oğuzhan Yukacı</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    <script src="~/TempCssJs/js/jquery.min.js"></script>
+    <script src="~/TempCssJs/js/popper.min.js"></script>
+    <script src="~/TempCssJs/js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="~/TempCssJs/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/TempCssJs/js/jquery.pogo-slider.min.js"></script>
+    <script src="~/TempCssJs/js/slider-index.js"></script>
+    <script src="~/TempCssJs/js/smoothscroll.js"></script>
+    <script src="~/TempCssJs/js/form-validator.min.js"></script>
+    <script src="~/TempCssJs/js/contact-form-script.js"></script>
+    <script src="~/TempCssJs/js/isotope.min.js"></script>
+    <script src="~/TempCssJs/js/images-loded.min.js"></script>
+    <script src="~/TempCssJs/js/custom.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
