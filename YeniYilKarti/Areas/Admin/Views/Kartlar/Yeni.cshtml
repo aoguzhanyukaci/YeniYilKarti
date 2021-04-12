@@ -8,7 +8,7 @@
 
 <div class="text-center">
     <h2>Yeni Kart Hazırla</h2>
-    <img width="300" src="@Url.Content($"~/Image/0{@ViewBag.ResimAd}.png")" />
+    <img width="300" src="@Url.Content($"~/Image/{@ViewBag.ResimAd}.png")" />
 </div>
 
 @using (Html.BeginForm("Yeni", "Kartlar", FormMethod.Post))

@@ -92,7 +92,7 @@ namespace YeniYilKarti.Areas.Admin.Controllers
                 mesaj2 = "";
             }
 
-            Bitmap bmp = new Bitmap(Server.MapPath($"/Image/0{kart.ResimAd}.png"));
+            Bitmap bmp = new Bitmap(Server.MapPath($"/Image/{kart.ResimAd}.png"));
             Bitmap bmp2 = ResizeBitmap(bmp, 420, 330);
             Bitmap bmp3 = new Bitmap(1000, 1000);
             Graphics g = Graphics.FromImage(bmp3);

@@ -1,17 +1,4 @@
 ﻿@model Kart
-@*<style>
-    .ortala{
-        text-align: center;
-        margin: auto;
-    }
-</style>
-
-<div class="ortala">
-    <h1>@Model.AliciAd</h1>
-    <img width="250" src="@Url.Content($"~/image/{Model.ResimAd}.png")" alt="" />
-    <p>@Model.Mesaj</p>
-    <h1>@Model.GonderenAd</h1>
-</div>*@
 
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
@@ -25,7 +12,7 @@
                     <h4 class="card-title"> @Model.AliciAd</h4>
                 </div>
 
-                <img src="@Url.Content($"~/image/0{Model.ResimAd}.png")" class="card-img-bottom" width="250" />
+                <img src="@Url.Content($"~/image/{Model.ResimAd}.png")" class="card-img-bottom" width="250" />
 
 
                 <div class="card-body">
